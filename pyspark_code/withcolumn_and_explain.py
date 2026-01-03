@@ -19,9 +19,9 @@ df.show()
 # add a new column to a DataFrame 
 # replace the values of an existing column with a new expression or value
 
-# df1 = df.withColumn("salary_after_hike",df.salary+0.80*df.salary)
+df1 = df.withColumn("salary_after_hike",df.salary+0.80*df.salary)
 
-# df1.show()
+df1.show()
 
 #Explain parameter: Prints the (logical and physical) plans to the console for debugging purposes.
 
