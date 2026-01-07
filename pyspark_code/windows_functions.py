@@ -58,3 +58,5 @@ df_dense_rank.show()
 window_spec = Window.partitionBy("employee_id").orderBy("sale_date")
 
 df.withColumn("prev_sales", lag("sales_amount", 1).over(window_spec)).show()
+
+
