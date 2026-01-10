@@ -19,7 +19,7 @@ df.show()
 
 
 # partiting using department different into parquet format
-df.write.option("header",True).partitionBy("department").mode("overwrite").parquet("department_partition")
+df.write.partitionBy("department").mode("overwrite").parquet("department_partition")
 
 #reading only specific partitioning file
 #reading where department is HR
@@ -31,3 +31,10 @@ df2.show()
 
 #engines decide to only read the partitions that are needed for the processing and 
 # eliminate the processing of all the other partitions. 
+
+#another way for pruning
+
+df2 = spark.read.parquet("/home/ayush/pyspark-workspace/department_partition").filter("department = 'HR'")
+df2.show()
+
+#Spark decides which partitions to read based on filters on partition columns.
