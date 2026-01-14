@@ -72,3 +72,4 @@ df_timely = df_day.filter((current_date() - col("EventDate")).cast("int") <= day
 df_timely.show()
 
 # can visit for in details knowledge https://medium.com/towards-data-engineering/pyspark-data-quality-3bbeb5e17887
+# https://www.montecarlodata.com/blog-pyspark-data-quality-checks

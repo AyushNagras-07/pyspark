@@ -1,0 +1,4 @@
+cust_id,segment,signup_date,email,phone,address,preferences_json
+C1,Premium,2022-01-10,a@x.com,999,NewYork,"{pref_1}"
+C2,Regular,2023-02-15,b@y.com,888,Bangalore,"{pref_2}"
+C3,Premium,2021-11-20,c@z.com,777,London,"{pref_3}"
