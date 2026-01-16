@@ -152,4 +152,14 @@ df_combined.groupBy("version").count().orderBy("count", ascending=False).show()
 #done a lot analysis about the data from 10 jan to 14 jan
 #lets write the data partioned output by the column date and country both
 
-df_combined.write.mode("overwrite").partitionBy("date", "country").parquet("/home/ayush/pyspark-workspace/project/output/download_logs")
+
+#reading the output data
+
+# df_combined.write.mode("overwrite").partitionBy("date", "country").parquet("/home/ayush/pyspark-workspace/project/output/download_logs")
+
+# df_read = spark.read.parquet(
+#     "/home/ayush/pyspark-workspace/output/download_logs"
+# )
+
+# # Spark reads ONLY this partition
+# df_read.filter("date = '2026-01-10' AND country = 'US'").show()
