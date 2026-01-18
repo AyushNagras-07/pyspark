@@ -151,13 +151,6 @@ This enables:
 
 ---
 
-## ⚠️ Notes
-
-* Generated output data (`project/output/`) should **not** be committed to Git
-* Use `.gitignore` to exclude large data files
-
----
-
 ## 📌 Future Improvements
 
 * Add session-level analysis per user
